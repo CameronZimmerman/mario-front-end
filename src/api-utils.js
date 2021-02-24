@@ -26,3 +26,8 @@ export async function createCharacter(character) {
     let response = await request.post(`${apiURL}/characters`).send(character);
     return response.body
 }
+
+export async function updateCharacter(name, character) {
+    let response = await request.put(`${apiURL}/characters/${name}`)
+    return response.body
+}
