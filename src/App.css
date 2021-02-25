@@ -19,7 +19,7 @@ html {
   height: 50vh;
   overflow-y: scroll;
   width: 50vw;
-  min-height: 50vw;
+  max-height: 50vw;
   background-color: rgba(255, 255, 255, 0.301);
   border: 3px solid black;
   padding: 20px;
