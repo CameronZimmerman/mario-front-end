@@ -23,3 +23,7 @@ html {
   border: 3px solid black;
   padding: 20px;
 }
+
+label{
+  display: block;
+}

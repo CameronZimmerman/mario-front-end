@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { getCharacters } from '../api-utils.js'
 
 export default class List extends Component {
     state = {
         characters: [],
       }
       async componentDidMount(){
-
+        let characters = await getCharacters()
+        this.setState({characters: characters})
       }
       render() {
         return (

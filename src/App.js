@@ -30,8 +30,8 @@ export default class App extends Component {
               renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/" exact component={List} />
-            <Route path="/about"  component={Detail} />
-            <Route path="/contact"  component={Create} />
+            <Route path="/detail"  component={Detail} />
+            <Route path="/create"  component={Create} />
           </Switch>
         </div>
       </Router>
