@@ -11,6 +11,7 @@ html {
 
 #root {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -22,4 +23,38 @@ html {
   background-color: rgba(255, 255, 255, 0.301);
   border: 3px solid black;
   padding: 20px;
+}
+.container img {
+  width: 20vw;
+  height: auto;
+}
+label{
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a :hover :not(p){
+  transform: scale(1.1);
+}
+
+a :not(p){
+  transition: transform 0.25s;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+}
+nav {
+  background-color: rgba(253, 53, 53, 0.603);
+  border: 3px dotted black;
+}
+li {
+  margin-right: 20px;
+}
+nav ul :hover{
+  transform: scale(1.2);
 }
