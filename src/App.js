@@ -14,6 +14,7 @@ export default class App extends Component {
   render() {
     return (
       <Router>
+        <h1>Mario characters!</h1>
         <div>
           <nav>
             <ul>
@@ -30,8 +31,8 @@ export default class App extends Component {
               renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/" exact component={List} />
-            <Route path="/detail"  component={Detail} />
-            <Route path="/create"  component={Create} />
+            <Route path="/characters/:name"  component={Detail} />
+            <Route path="/create" exact component={Create} />
           </Switch>
         </div>
       </Router>

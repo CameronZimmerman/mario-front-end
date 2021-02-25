@@ -13,12 +13,12 @@ export async function getCategories() {
 }
 
 export async function getCharacter(name) {
-    let response = await request.get(`${apiURL}/categories/${name}`)
+    let response = await request.get(`${apiURL}/characters/${name}`)
     return response.body
 }
 
 export async function deleteCharacter(name) {
-    let response = await request.delete(`${apiURL}/categories/${name}`)
+    let response = await request.delete(`${apiURL}/characters/${name}`)
     return response.body
 }
 
@@ -27,6 +27,5 @@ export async function createCharacter(character) {
 }
 
 export async function updateCharacter(name, character) {
-    let response = await request.put(`${apiURL}/characters/${name}`)
-    return response.body
+    await request.put(`${apiURL}/characters/${name}`).send(character)
 }

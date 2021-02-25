@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getCharacters } from '../api-utils.js'
+import { Link } from 'react-router-dom'
 
 export default class List extends Component {
     state = {
@@ -14,7 +15,7 @@ export default class List extends Component {
           <div className = 'container'>
             <section>
               {
-                this.state.characters.map(character => <div><img src = {character.image_url} alt = {character.name}/><p style = {{backgroundColor: 'white'}}>{character.name} is a {character.good_guy ? <span>good</span> : <span>bad</span>} person. They are {character.age} years old. Their favorite quote is "{character.quote}"</p></div>)
+                this.state.characters.map(character => <Link to={`/characters/${character.name}`} ><div><img src = {character.image_url} alt = {character.name}/><p style = {{backgroundColor: 'white'}}>{character.name} is a {character.good_guy ? <span>good</span> : <span>bad</span>} person. They are {character.age} years old. Their favorite quote is "{character.quote}"</p></div></Link>)
               }
             </section>
             
