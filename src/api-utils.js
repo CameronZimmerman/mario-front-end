@@ -23,8 +23,7 @@ export async function deleteCharacter(name) {
 }
 
 export async function createCharacter(character) {
-    let response = await request.post(`${apiURL}/characters`).send(character);
-    return response.body
+    await request.post(`${apiURL}/characters`).send(character);
 }
 
 export async function updateCharacter(name, character) {
